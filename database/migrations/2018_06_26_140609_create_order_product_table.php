@@ -37,6 +37,8 @@ class CreateOrderProductTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('order_products');
+        DB::statement('SET FOREIGN_KEY_CHECKS = 0');
+        Schema::drop('order_product');
+        DB::statement('SET FOREIGN_KEY_CHECKS = 1');
     }
 }

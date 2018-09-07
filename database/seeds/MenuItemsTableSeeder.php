@@ -173,5 +173,54 @@ class MenuItemsTableSeeder extends Seeder
                 'order'      => 14,
             ])->save();
         }
+
+        $menuItem = MenuItem::firstOrCreate([ 
+                'menu_id' => 2, 
+                'title' => 'Home', 
+                'url' => '', 
+                'target' => '_self',                 
+                'icon_class' => '',
+                'color'      => '#000000',
+                'parent_id'  => null,
+                'order'      => 15, 
+                'route' => 'home'
+        ]);
+            
+        $menuItem = MenuItem::firstOrCreate([    
+                'menu_id' => 2, 
+                'title' => 'Shop', 
+                'url' => '#', 
+                'target' => '_self',                 
+                'icon_class' => '',
+                'color'      => '#000000',
+                'parent_id'  => null,
+                'order'      => 16, 
+                'route' => 'shop'
+        ]);
+            
+        $menuItem = MenuItem::firstOrCreate([    
+                'menu_id' => 2, 
+                'title' => 'About', 
+                'url' => '', 
+                'target' => '_self',                 
+                'icon_class' => '',
+                'color'      => '#000000',
+                'parent_id'  => null,
+                'order'      => 17, 
+                'route' => ''
+        ]);
+            
+        $menuItem = MenuItem::firstOrCreate([    
+                'menu_id' => 2, 
+                'title' => 'Wishlist', 
+                'url' => '', 
+                'target' => '_self',                 
+                'icon_class' => '',
+                'color'      => '#000000',
+                'parent_id'  => null,
+                'order'      => 18, 
+                'route' => 'wishlist.index'
+        ]);
+
     }
 }
